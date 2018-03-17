@@ -16,9 +16,10 @@ public class UserDaoTest {
     }
 
     @Test //메소드 단위로도 테스트 가능
-    public void get() throws SQLException, ClassNotFoundException { //Excaption throw시킨 이유 = 처리는 자신이 제일 잘 알 때 처리하는 것.
+    public void get() throws SQLException, ClassNotFoundException { //Excaption throw시킨 이유 = 예외처리는 자신이 제일 잘 알 때 처리하는 것.
         int id= 1;
         User user = userDao.get(id);
+        //assertThat(T actual, Matcher<? super T> matcher)의 형태로 두 값을 비교. 첫번째 파라미터에는 비교대상 값, 두번째 파라미터로는 비교로직이 담긴 Matcher.
         assertThat(user.getId(), is(1));
         assertThat(user.getName(), is("이승수"));
         assertThat(user.getPassword(), is("1111"));
@@ -29,7 +30,7 @@ public class UserDaoTest {
         User user = new User();
         user.setName("이용자");
         user.setPassword("1234");
-        //id는 오토인크리먼트기 때문에 따로 지정해줄 필요 없음
+        //id는 auto_increment기 때문에 따로 지정해줄 필요 없음
         Integer id = userDao.insert(user);
 //        User insertedUser = userDao.insert(user);
 
