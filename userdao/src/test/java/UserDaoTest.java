@@ -10,11 +10,12 @@ import java.sql.SQLException;
 public class UserDaoTest {
 
     private UserDao userDao;
+    private DaoFactory daoFactory;
 //    private UserDao hallaUserDao;
 
     @Before //Test하기 전에 수행
     public void setup(){
-        userDao = new UserDao();
+        userDao = daoFactory.getUserDao(); //클라이언트도 결정을 다른 곳에 넘김
     }
 
     @Test //메소드 단위로도 테스트 가능

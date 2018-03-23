@@ -1,11 +1,15 @@
 import java.sql.*;
 
 public class UserDao {
-    private final connectionMaker connectionMaker = new JejuConnectionMaker();//new 키워드를 사용하는 경우 dependency가 생겨버림
+    private final ConnectionMaker ConnectionMaker;
+
+    public UserDao(ConnectionMaker connectionMaker) {
+        this.ConnectionMaker = connectionMaker; //의존성을 클라이언트에게 넘김
+    }
 
     public User get(int id) throws ClassNotFoundException, SQLException {
         //Connection
-        Connection connection = connectionMaker.getConnection();
+        Connection connection = ConnectionMaker.getConnection();
 
         //sql 작성 (PreparedStatement = statement를 상속받는 인터페이스로 SQL구문을 실행시키는 기능을 갖는 객체)
         PreparedStatement preparedStatement = connection.prepareStatement("select * from userinfo where id = ?");
@@ -33,7 +37,7 @@ public class UserDao {
 
     public Integer insert(User user) throws ClassNotFoundException, SQLException {
         //Connection
-        Connection connection = connectionMaker.getConnection();
+        Connection connection = ConnectionMaker.getConnection();
 
         //sql 작성
         PreparedStatement preparedStatement = connection.prepareStatement("insert into userinfo(name, password) values(?,?)");
@@ -62,6 +66,6 @@ public class UserDao {
     }
 
     public Connection getConnection() throws ClassNotFoundException, SQLException {
-        return connectionMaker.getConnection();
+        return ConnectionMaker.getConnection();
     }
 }
