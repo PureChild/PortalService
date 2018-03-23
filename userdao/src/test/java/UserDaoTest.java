@@ -15,6 +15,7 @@ public class UserDaoTest {
 
     @Before //Test하기 전에 수행
     public void setup(){
+        daoFactory = new DaoFactory();
         userDao = daoFactory.getUserDao(); //클라이언트도 결정을 다른 곳에 넘김
     }
 
