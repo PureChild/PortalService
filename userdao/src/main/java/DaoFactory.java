@@ -1,17 +1,38 @@
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.SimpleDriverDataSource;
+import javax.sql.DataSource;
+import java.sql.Driver;
 
 //얘가 스프링
 @Configuration
 public class DaoFactory {
+    @Value("${db.classname}")
+    private String className;
+    @Value("${db.url}")
+    private String url;
+    @Value("${db.username}")
+    private String username;
+    @Value("${db.password}")
+    private String password;
+
     @Bean
-    public UserDao UserDao() {
-        return new UserDao(ConnectionMaker());
+    public UserDao userDao() {
+        return new UserDao(dataSource());
     }
 
-    @Bean //Spring Container가 관리하는 자바 오브젝트
-    //반복되는 것은 Refactor + Extract + Method
-    public ConnectionMaker ConnectionMaker() {
-        return new JejuConnectionMaker();
+    public DataSource dataSource(){
+        SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
+        try {
+            dataSource.setDriverClass((Class<? extends Driver>) Class.forName(className));
+        } catch (ClassNotFoundException e) {
+            new RuntimeException(e);
+        }
+        dataSource.setUrl(url);
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
+
+        return dataSource;
     }
 }
