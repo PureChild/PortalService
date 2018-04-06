@@ -3,6 +3,8 @@ import static org.hamcrest.CoreMatchers.*;
 
 import org.junit.Before;
 import org.junit.Test; //TestCase지원
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.SQLException;
 
@@ -15,8 +17,8 @@ public class UserDaoTest {
 
     @Before //Test하기 전에 수행
     public void setup(){
-        daoFactory = new DaoFactory();
-        userDao = daoFactory.getUserDao(); //클라이언트도 결정을 다른 곳에 넘김
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(DaoFactory.class);
+        userDao = applicationContext.getBean(UserDao.class);
     }
 
     @Test //메소드 단위로도 테스트 가능

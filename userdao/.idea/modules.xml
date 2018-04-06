@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/userdao.iml" filepath="$PROJECT_DIR$/userdao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userdao_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userdao_main.iml" group="userdao" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userdao_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userdao_test.iml" group="userdao" />
     </modules>
   </component>
 </project>

@@ -1,10 +1,17 @@
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+//얘가 스프링
+@Configuration
 public class DaoFactory {
-    public UserDao getUserDao() {
-        return new UserDao(getConnectionMaker());
+    @Bean
+    public UserDao UserDao() {
+        return new UserDao(ConnectionMaker());
     }
 
+    @Bean
     //반복되는 것은 Refactor + Extract + Method
-    public ConnectionMaker getConnectionMaker() {
+    public ConnectionMaker ConnectionMaker() {
         return new JejuConnectionMaker();
     }
 }
