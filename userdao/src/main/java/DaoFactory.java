@@ -9,7 +9,7 @@ public class DaoFactory {
         return new UserDao(ConnectionMaker());
     }
 
-    @Bean
+    @Bean //Spring Container가 관리하는 자바 오브젝트
     //반복되는 것은 Refactor + Extract + Method
     public ConnectionMaker ConnectionMaker() {
         return new JejuConnectionMaker();

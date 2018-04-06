@@ -1,12 +1,13 @@
-import static org.hamcrest.MatcherAssert.*; //비교 동작 지원, static으로 import하면 클래스 없이 라이브러리 안의 스태틱메소드 사용 가능
-import static org.hamcrest.CoreMatchers.*;
-
 import org.junit.Before;
-import org.junit.Test; //TestCase지원
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.sql.SQLException;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 
 public class UserDaoTest {
@@ -17,6 +18,7 @@ public class UserDaoTest {
 
     @Before //Test하기 전에 수행
     public void setup(){
+//        ApplicationContext applicationContext = new GenericXmlApplicationContext("daoFactory.xml");  //xml로할경우
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(DaoFactory.class);
         userDao = applicationContext.getBean(UserDao.class);
     }
