@@ -25,4 +25,20 @@ public class JejuConnectionMaker implements ConnectionMaker {
 //        leess911 = "leess911";
         return DriverManager.getConnection(url, username, password);
     }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
