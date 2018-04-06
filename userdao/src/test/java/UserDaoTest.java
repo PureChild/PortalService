@@ -18,7 +18,7 @@ public class UserDaoTest {
 
     @Before //Test하기 전에 수행
     public void setup(){
-//        ApplicationContext applicationContext = new GenericXmlApplicationContext("daoFactory.xml");  //xml로할경우
+//        ApplicationContext applicationContext = new GenericXmlApplicationContext("daoFactory.xml");  //xml로 할경우
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(DaoFactory.class);
         userDao = applicationContext.getBean(UserDao.class);
     }
