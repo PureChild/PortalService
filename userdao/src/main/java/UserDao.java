@@ -8,7 +8,6 @@ public class UserDao {
 //    private final ConnectionMaker ConnectionMaker;
     private final DataSource dataSource;
 
-
     public UserDao(DataSource dataSource) {
         this.dataSource = dataSource;
     }
@@ -119,14 +118,12 @@ public class UserDao {
     public void update(User user) throws SQLException, ClassNotFoundException {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
-        Integer id;
         try {
             connection = dataSource.getConnection();
 
-            preparedStatement = connection.prepareStatement("update userinfo set name = ?, password = ? where id = ?");
-            preparedStatement.setString(1, user.getName());
-            preparedStatement.setString(2, user.getPassword());
-            preparedStatement.setInt(3, user.getId());
+            StatementStrategy statementStrategy = new UpdatedUserStatementStrategy(user);
+//            preparedStatement = makePreparedStatement(user, connection);
+            preparedStatement = statementStrategy.makeStatement(connection);
 
             preparedStatement.executeUpdate();
 
@@ -157,9 +154,9 @@ public class UserDao {
         PreparedStatement preparedStatement = null;
         try {
             connection = dataSource.getConnection();
+            StatementStrategy statementStrategy = new DeleteUserStatmentStrategy(id);
+            preparedStatement = statementStrategy.makeStatement(connection);
 
-            preparedStatement = connection.prepareStatement("delete from userinfo where id = ?");
-            preparedStatement.setInt(1, id);
 
             preparedStatement.executeUpdate();
 
