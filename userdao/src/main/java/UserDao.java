@@ -1,8 +1,5 @@
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class UserDao {
 //    private final ConnectionMaker ConnectionMaker;
@@ -21,9 +18,8 @@ public class UserDao {
             //Connection
             connection = dataSource.getConnection();
 
-            //sql 작성 (PreparedStatement = statement를 상속받는 인터페이스로 SQL구문을 실행시키는 기능을 갖는 객체)
-            preparedStatement = connection.prepareStatement("select * from userinfo where id = ?");
-            preparedStatement.setInt(1, id);
+            StatementStrategy statementStrategy = new GetUserStatementStrategy(id);
+            preparedStatement = statementStrategy.makeStatement(connection);
 
             //sql 실행
             resultSet = preparedStatement.executeQuery();
@@ -72,16 +68,16 @@ public class UserDao {
         try {
             connection = dataSource.getConnection();
 
-            preparedStatement = connection.prepareStatement("insert into userinfo(name, password) values(?,?)");
-            preparedStatement.setString(1, user.getName());
-            preparedStatement.setString(2, user.getPassword());
+            StatementStrategy statementStrategy = new InsertUserStatementStrategy(user);
+            preparedStatement = statementStrategy.makeStatement(connection);
 
             preparedStatement.executeUpdate();
 
-            preparedStatement = connection.prepareStatement("select last_insert_id()");
+//            mysql만 종속이돼서 별로 좋은 방법이 아님
+//            preparedStatement = connection.prepareStatement("select last_insert_id()");
+//            resultSet = preparedStatement.executeQuery();
 
-            resultSet = preparedStatement.executeQuery();
-
+            resultSet = preparedStatement.getGeneratedKeys();
             resultSet.next();
 
             id = resultSet.getInt(1);
