@@ -71,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDaoTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserDaoTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/UserDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
@@ -81,19 +81,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="736">
+              <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
               <folding>
                 <element signature="e#131#132#0" expanded="true" />
                 <element signature="e#177#178#0" expanded="true" />
-                <marker date="1523605879117" expanded="true" signature="409:444" ph="select * fro... userinfo" />
-                <marker date="1523605879117" expanded="true" signature="881:916" ph="select * fro... userinfo" />
-                <marker date="1523605879117" expanded="true" signature="1316:1364" ph="insert into userinfo... " />
-                <marker date="1523605879117" expanded="true" signature="1847:1902" ph="update userinfo... " />
-                <marker date="1523605879117" expanded="true" signature="2400:2433" ph="delete from userinfo... " />
+                <marker date="1523606787512" expanded="true" signature="252:287" ph="select * fro... userinfo" />
+                <marker date="1523606787512" expanded="true" signature="479:527" ph="insert into userinfo... " />
+                <marker date="1523606787512" expanded="true" signature="740:795" ph="update userinfo... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JdbcContext.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JdbcContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+              <folding>
+                <element signature="e#156#157#0" expanded="true" />
+                <element signature="e#200#201#0" expanded="true" />
+                <marker date="1523606830326" expanded="true" signature="3516:3539" ph="select last_... " />
               </folding>
             </state>
           </provider>
@@ -428,8 +440,8 @@
         <option value="$PROJECT_DIR$/src/main/java/GetUserStatementStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/InsertUserStatementStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/DaoFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JdbcContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JdbcContext.java" />
       </list>
     </option>
   </component>
@@ -669,14 +681,11 @@
       <workItem from="1523500431254" duration="210000" />
       <workItem from="1523503092115" duration="28000" />
       <workItem from="1523534319474" duration="31000" />
-      <workItem from="1523598883730" duration="6448000" />
+      <workItem from="1523598883730" duration="7390000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserDaoTest - 2018.04.06 at 16h 44m 08s.xml">
-      <configuration name="UserDaoTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserDaoTest - 2018.04.06 at 16h 48m 01s.xml">
       <configuration name="UserDaoTest" configurationId="JUnit" />
     </history-entry>
@@ -704,9 +713,12 @@
     <history-entry file="UserDaoTest - 2018.04.13 at 16h 27m 58s.xml">
       <configuration name="UserDaoTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserDaoTest - 2018.04.13 at 16h 52m 04s.xml">
+      <configuration name="UserDaoTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14790000" />
+    <option name="totallyTimeSpent" value="15732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -809,11 +821,9 @@
           <folding>
             <element signature="e#131#132#0" expanded="true" />
             <element signature="e#177#178#0" expanded="true" />
-            <marker date="1523605879117" expanded="true" signature="409:444" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="881:916" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="1316:1364" ph="insert into userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="1847:1902" ph="update userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="2400:2433" ph="delete from userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="252:287" ph="select * fro... userinfo" />
+            <marker date="1523606787512" expanded="true" signature="479:527" ph="insert into userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="740:795" ph="update userinfo... " />
           </folding>
         </state>
       </provider>
@@ -872,11 +882,9 @@
           <folding>
             <element signature="e#131#132#0" expanded="true" />
             <element signature="e#177#178#0" expanded="true" />
-            <marker date="1523605879117" expanded="true" signature="409:444" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="881:916" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="1316:1364" ph="insert into userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="1847:1902" ph="update userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="2400:2433" ph="delete from userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="252:287" ph="select * fro... userinfo" />
+            <marker date="1523606787512" expanded="true" signature="479:527" ph="insert into userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="740:795" ph="update userinfo... " />
           </folding>
         </state>
       </provider>
@@ -935,11 +943,9 @@
           <folding>
             <element signature="e#131#132#0" expanded="true" />
             <element signature="e#177#178#0" expanded="true" />
-            <marker date="1523605879117" expanded="true" signature="409:444" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="881:916" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="1316:1364" ph="insert into userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="1847:1902" ph="update userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="2400:2433" ph="delete from userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="252:287" ph="select * fro... userinfo" />
+            <marker date="1523606787512" expanded="true" signature="479:527" ph="insert into userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="740:795" ph="update userinfo... " />
           </folding>
         </state>
       </provider>
@@ -998,11 +1004,9 @@
           <folding>
             <element signature="e#131#132#0" expanded="true" />
             <element signature="e#177#178#0" expanded="true" />
-            <marker date="1523605879117" expanded="true" signature="409:444" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="881:916" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="1316:1364" ph="insert into userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="1847:1902" ph="update userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="2400:2433" ph="delete from userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="252:287" ph="select * fro... userinfo" />
+            <marker date="1523606787512" expanded="true" signature="479:527" ph="insert into userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="740:795" ph="update userinfo... " />
           </folding>
         </state>
       </provider>
@@ -1061,11 +1065,9 @@
           <folding>
             <element signature="e#131#132#0" expanded="true" />
             <element signature="e#177#178#0" expanded="true" />
-            <marker date="1523605879117" expanded="true" signature="409:444" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="881:916" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="1316:1364" ph="insert into userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="1847:1902" ph="update userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="2400:2433" ph="delete from userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="252:287" ph="select * fro... userinfo" />
+            <marker date="1523606787512" expanded="true" signature="479:527" ph="insert into userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="740:795" ph="update userinfo... " />
           </folding>
         </state>
       </provider>
@@ -1124,11 +1126,9 @@
           <folding>
             <element signature="e#131#132#0" expanded="true" />
             <element signature="e#177#178#0" expanded="true" />
-            <marker date="1523605879117" expanded="true" signature="409:444" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="881:916" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="1316:1364" ph="insert into userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="1847:1902" ph="update userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="2400:2433" ph="delete from userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="252:287" ph="select * fro... userinfo" />
+            <marker date="1523606787512" expanded="true" signature="479:527" ph="insert into userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="740:795" ph="update userinfo... " />
           </folding>
         </state>
       </provider>
@@ -1187,11 +1187,9 @@
           <folding>
             <element signature="e#131#132#0" expanded="true" />
             <element signature="e#177#178#0" expanded="true" />
-            <marker date="1523605879117" expanded="true" signature="409:444" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="881:916" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="1316:1364" ph="insert into userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="1847:1902" ph="update userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="2400:2433" ph="delete from userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="252:287" ph="select * fro... userinfo" />
+            <marker date="1523606787512" expanded="true" signature="479:527" ph="insert into userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="740:795" ph="update userinfo... " />
           </folding>
         </state>
       </provider>
@@ -1273,14 +1271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/UserDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JejuConnectionMaker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -1308,31 +1298,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JdbcContext.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state relative-caret-position="736">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <marker date="1523605426893" expanded="true" signature="3617:3640" ph="select last_... " />
+            <element signature="e#131#132#0" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+            <marker date="1523606787512" expanded="true" signature="252:287" ph="select * fro... userinfo" />
+            <marker date="1523606787512" expanded="true" signature="479:527" ph="insert into userinfo... " />
+            <marker date="1523606787512" expanded="true" signature="740:795" ph="update userinfo... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/JdbcContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="413">
+          <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
           <folding>
-            <element signature="e#131#132#0" expanded="true" />
-            <element signature="e#177#178#0" expanded="true" />
-            <marker date="1523605879117" expanded="true" signature="409:444" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="881:916" ph="select * fro... userinfo" />
-            <marker date="1523605879117" expanded="true" signature="1316:1364" ph="insert into userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="1847:1902" ph="update userinfo... " />
-            <marker date="1523605879117" expanded="true" signature="2400:2433" ph="delete from userinfo... " />
+            <element signature="e#156#157#0" expanded="true" />
+            <element signature="e#200#201#0" expanded="true" />
+            <marker date="1523606830326" expanded="true" signature="3516:3539" ph="select last_... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/UserDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
