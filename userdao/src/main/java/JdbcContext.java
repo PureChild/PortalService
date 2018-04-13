@@ -4,7 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class JdbcContext {//    private final ConnectionMaker ConnectionMaker;
+public class JdbcContext {
     final DataSource dataSource;
 
     public JdbcContext(DataSource dataSource) {
