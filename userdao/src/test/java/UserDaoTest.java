@@ -2,7 +2,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.sql.SQLException;
 
@@ -14,7 +13,6 @@ import static org.hamcrest.core.IsNull.nullValue;
 public class UserDaoTest {
 
     private UserDao userDao;
-    private DaoFactory daoFactory;
 
     @Before
     public void setup(){

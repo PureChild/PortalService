@@ -3,10 +3,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
+
 import javax.sql.DataSource;
 import java.sql.Driver;
 
-//얘가 스프링
 @Configuration
 public class DaoFactory {
     @Value("${db.classname}")
