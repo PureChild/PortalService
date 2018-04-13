@@ -1,3 +1,5 @@
+import org.springframework.beans.factory.parsing.EmptyReaderEventListener;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -14,13 +16,16 @@ public class UserDao {
     public User get(int id) throws SQLException {
         String sql = "select * from userinfo where id = ?";
         Object[] params = new Object[] {id};
-        return jdbcTemplate.queryForObject(sql, params, (rs, rowNum) -> {
+        try {
+            return jdbcTemplate.queryForObject(sql, params, (rs, rowNum) -> {
             User user = new User();
             user.setId(rs.getInt("id"));
             user.setName(rs.getString("name"));
             user.setPassword(rs.getString("password"));
             return user;
-        });
+        });}catch (EmptyResultDataAccessException e) {
+            return null;
+        }
     }
 
     public Integer insert(User user) throws SQLException {
