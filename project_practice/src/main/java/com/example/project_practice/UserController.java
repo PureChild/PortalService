@@ -25,6 +25,7 @@ public class UserController {
         return userRepository.findAll();
     }
 
+    @GetMapping("/findExample")
     public Page<User> findExample(@RequestParam String name, @RequestParam String password, @RequestParam Integer page, @RequestParam Integer size){
         PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.ASC, "id");
         return userRepository.findAllByNameAndPassword(name, password, pageRequest);
