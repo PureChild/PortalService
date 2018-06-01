@@ -1,6 +1,9 @@
 package com.example.project_practice;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +23,11 @@ public class UserController {
     @GetMapping("/list")
     public List<User> list(){
         return userRepository.findAll();
+    }
+
+    public Page<User> findExample(@RequestParam String name, @RequestParam String password, @RequestParam Integer page, @RequestParam Integer size){
+        PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.ASC, "id");
+        return userRepository.findAllByNameAndPassword(name, password, pageRequest);
     }
 
     @PostMapping
