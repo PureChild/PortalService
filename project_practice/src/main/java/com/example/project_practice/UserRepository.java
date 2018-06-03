@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer>{
-// HQL   @Query(value = "select u from User u where u.name = :name and u.password = :password")
-    @Query(value = "select * from userinfo where name = :name and password = :password", nativeQuery = true)
+//    @Query(value = "select * from userinfo where name = :name and password = :password", nativeQuery = true)
+    @Query(value = "select u from User u join u.comment c where u.name = :name and u.password = :password")
     Page<User> findAllByNameAndPassword(@Param("name") String name, @Param("password") String password, Pageable pageRequest);
 }

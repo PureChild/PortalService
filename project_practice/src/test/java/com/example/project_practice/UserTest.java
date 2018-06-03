@@ -1,7 +1,7 @@
 package com.example.project_practice;
 
 import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.MatcherAssert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.hamcrest.collection.IsEmptyCollection;
 import org.junit.Test;
@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.jws.soap.SOAPBinding;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -25,7 +24,7 @@ public class UserTest {
     @Test
     public void get(){
         Integer id = 1;
-        String name = "승수";
+        String name = "이 승수";
         String password = "leess911";
         User user = restTemplate.getForObject(PATH + "/" + id, User.class);
         assertThat(user.getId(), is(id));
