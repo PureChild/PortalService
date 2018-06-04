@@ -24,8 +24,8 @@ public class UserTest {
     @Test
     public void get(){
         Integer id = 1;
-        String name = "이 승수";
-        String password = "leess911";
+        String name = "이승수";
+        String password = "1111";
         User user = restTemplate.getForObject(PATH + "/" + id, User.class);
         assertThat(user.getId(), is(id));
         assertThat(user.getName(), is(name));
